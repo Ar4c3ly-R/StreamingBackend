@@ -1,0 +1,14 @@
+type Query {
+    getMovies:[Movie]
+}
+
+# type Mutation
+
+type Movie {
+    _id: ID
+    title: String
+    description: String
+    likes: Int
+    image: String
+    releasedate: String
+}

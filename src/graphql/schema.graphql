@@ -2,7 +2,6 @@ type Query {
     getMovies:[Movie]
 }
 
-# type Mutation
 
 type Movie {
     _id: ID

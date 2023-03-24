@@ -2,6 +2,7 @@ type Query {
     getMovies:[Movie]
 }
 
+
 type Movie {
     _id: ID
     title: String

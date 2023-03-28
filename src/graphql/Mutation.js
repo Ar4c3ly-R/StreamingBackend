@@ -1,4 +1,5 @@
 import Movie from "../models/Movie.js"
+import User from "../models/User.js"
 
 const Mutation = {
 
@@ -9,7 +10,7 @@ const Mutation = {
         return await Movie.find()
     },
 
-    async updateMovie( _, { title, description, likes, image, releasedate }) {
+    async updateMovie( _, { _id, title, description, likes, image, releasedate }) {
 
         return await Movie.findByIdAndUpdate(_id, {title, description, likes, image, releasedate }, {new: true})
     },

@@ -1,4 +1,5 @@
-import Movie from "../models/Movie.js";
+import Movie from "../models/Movie.js"
+import User from "../models/User.js"
 
 const Query = {
     
@@ -8,7 +9,9 @@ const Query = {
     },
 
     async findByTitleMovie(_, { title } ) {
-        const movieName = await Movie.find({title})
+        const movieName = await Movie.find({ title } )
+        // const movieName = await Movie.exists( { title } )
+        console.log(movieName)
         return await movieName
 
     // await Character.deleteMany({});
@@ -20,7 +23,7 @@ const Query = {
 
     async login(_, { email, password } ) {
         const userVerif = await User.findOne( { email, password })
-        console.log(userVerif)
+        // console.log(userVerif)
         if ( userVerif ) {
         return userVerif
         } else

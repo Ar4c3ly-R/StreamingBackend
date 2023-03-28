@@ -6,9 +6,9 @@ type Query {
 
 type Mutation {
     createMovie(title:String, description:String, likes:Int, image:String, releasedate:String): [Movie]
-    updateMovie(title:String, description:String, likes:Int, image:String, releasedate:String): Movie
+    updateMovie(_id:ID, title:String, description:String, likes:Int, image:String, releasedate:String): Movie
     deleteMovie(_id:ID): [Movie]
-    createUser(name: String, email: String, password:String): [User]
+    createUser(name: String, email: String, password:String): User
 }
 
 type Movie {
